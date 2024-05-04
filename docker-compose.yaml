@@ -1,0 +1,11 @@
+services:
+  quantlib:
+    image: quantlib-jupyter
+    container_name: quantlib
+    environment:
+      TZ: "Europe/Amsterdam"
+    ports:
+      - "9998:9998"
+    volumes:
+      - ./quantlib-jupyter/notebook:/notebooks
+      - /etc/localtime:/etc/localtime:ro
