@@ -15,3 +15,5 @@ VOLUME ./notebooks
 COPY *.ipynb /notebooks/
 
 CMD jupyter notebook --no-browser --allow-root --ip=0.0.0.0 --port=9998 --notebook-dir=/notebooks
+#NOT RECOMMENDED! if you want to skip the password/token authentication: 
+#CMD jupyter notebook --no-browser --allow-root --ip=0.0.0.0 --port=9998 --notebook-dir=/notebooks --NotebookApp.token='' --NotebookApp.password=''
